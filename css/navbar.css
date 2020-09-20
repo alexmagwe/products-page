@@ -1,0 +1,32 @@
+.navbar{
+    display:flex;
+    width:90%;
+    height:4em;
+    margin:auto;
+justify-content:space-between;
+    align-items: center;
+
+}
+.navbar .logo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1.5em;
+    font-weight:600;
+}
+.nav-links{
+    width:20%;
+    display: flex;
+    /* border:1px solid red; */
+    justify-content:space-evenly;
+    
+}
+.nav-links .nav-link{
+    color:inherit;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s ease-in-out;
+
+}
+.nav-links .nav-link:hover{
+    color:purple;
+    
+}
