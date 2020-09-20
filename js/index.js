@@ -1,7 +1,8 @@
 const server='http://127.0.0.1:5000'
+const herokuserver='https://shopit-api.herokuapp.com'
 const grid=document.querySelector('#products')
 const getproducts=()=>{
-    axios.get(server+'/products/all').then(resp=>{let products=resp.data;
+    axios.get(herokuserver+'/products/all').then(resp=>{let products=resp.data;
         products.forEach(product=>{
             let item=document.createElement('div')
             let name=document.createElement('h3')
