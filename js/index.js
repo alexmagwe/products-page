@@ -10,6 +10,9 @@ const getproducts=()=>{
             name.innerHTML = product.name;
             let link=document.createElement('a')
             link.href='product.html'
+            name.classList.add('name')
+            price.classList.add('price')
+
 
             price.innerHTML = product.price;
             let img=document.createElement('img')
