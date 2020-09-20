@@ -13,6 +13,7 @@ img{
 .item{
     /* max-height:300px; */
     /* width:300px; */
+    min-height: 400px;
     max-height:450px;
     overflow-x: hidden;
         box-shadow:0 0 15px 2px rgb(236, 235, 235);
