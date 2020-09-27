@@ -99,7 +99,7 @@ if (diff>0){
     else{
         cart.classList.add('show')
     }
-    
+oldcartlength=items.length    
 }
 cartlink.addEventListener('click',toggleCart)
 document.addEventListener('DOMContentLoaded',getproducts)
