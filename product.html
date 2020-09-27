@@ -4,18 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/navbar.css">
+        <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+
         <link rel="stylesheet" href="css/product.css">
 <script src='./js/carousel.js' defer></script>
+<script src='./js/cart.js' defer></script>
+    <script src='./js/index.js' defer></script>
+
+
     <title>Shopit</title>
 </head>
 <body>
        <div class='navbar'>
             <a href ='index.html' class='logo'>Shopit</a>
             <div class='nav-links'>
-            <span class='nav-link'>Cart</span>
+            <span id='cart-link' class='nav-link'>Cart</span>
             <span class='nav-link'>Login</span>
             </div>
         </div>
+                <div class="cart-container">
+        <table class='cart-table' id="cart-table">
+           <tr> <th id='th-name' >
+                Product
+            </th>
+            <th id='th-quantity'>
+            Quantity
+            </th>
+            <th id="th-amount">
+                Amount
+            </th></tr>
+        </table>
+        <table class='total-table cart-table'>
+           
+            <tr >
+                <td class='total-text' >Total</td>
+                <td id='total'></td>
+            </tr>
+
+        </table>
+    <button class='checkout-btn'>Checkout</button>
+    </div>
         <div class="product-container">
             <div class="product">
                 <div class="carousel">
@@ -28,9 +56,11 @@
                     </div>
                 </div>
                 <div id="side-info">
-                    <h2>Glazed pancakes</h2>
+                    <h2 id='1'>Glazed pancakes</h2>
                     <h1>300 KSH</h1>
-                    <button class='btn'>Add to cart</button>
+                    <label for="quantity">Quantity</label>
+                    <input  class='quantity' id='quantity' min="1" value="1" type="number">
+                    <button id ='cart-btn' class='btn'>Add to cart</button>
 
                 </div>
                 <div class="bottom-info">

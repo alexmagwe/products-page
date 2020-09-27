@@ -6,6 +6,7 @@
     <title>Shopit</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script src='./js/index.js' defer></script>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/navbar.css'>
@@ -15,11 +16,33 @@
       <div class='navbar'>
             <a href=# class='logo'>Shopit</a>
             <div class='nav-links'>
-            <span class='nav-link'>Cart</span>
+        <span id="cart-link" class='nav-link'>Cart</span>
             <span class='nav-link'>Login</span>
             </div>
 
         </div>
+        <div class="cart-container">
+        <table class='cart-table' id="cart-table">
+           <tr> <th id='th-name' >
+                Product
+            </th>
+            <th id='th-quantity'>
+            Quantity
+            </th>
+            <th id="th-amount">
+                Amount
+            </th></tr>
+        </table>
+        <table class='total-table cart-table'>
+           
+            <tr >
+                <td class='total-text' >Total</td>
+                <td id='total'></td>
+            </tr>
+
+        </table>
+    <button class='checkout-btn'>Checkout</button>
+    </div>
     <div class='container'>
         <div id="products">
         </div>
