@@ -2,10 +2,7 @@ const localserver='http://127.0.0.1:5000'
 const herokuserver='https://shopit-api.herokuapp.com'
 const grid=document.querySelector('#products')
 const getproducts=()=>{
-           let localcart=localStorage.getItem("cart")
-           if (!localcart){
-            localStorage.setItem("cart",JSON.stringify([]))
-           }
+       
     axios.get(herokuserver+'/products/all').then(resp=>{let products=resp.data;
         products.forEach((product,index)=>{
             let item=document.createElement('div')
@@ -36,7 +33,7 @@ const getproducts=()=>{
 }
 const fillCart=(items)=>{
 
-items.forEach(item=>{
+if (items.length>0){items.forEach(item=>{
     let tr=document.createElement('tr');
     let img=document.createElement('img')
     let changequantity=document.createElement('input')
@@ -62,9 +59,12 @@ items.forEach(item=>{
     tr.appendChild(amount)
     table.appendChild(tr)
         })
-    
+    }
 }
-
+    let localcart=localStorage.getItem("cart")
+           if (!localcart){
+            localStorage.setItem("cart",JSON.stringify([]))
+           }
 let cartlink=document.querySelector('#cart-link')
 let cart=document.querySelector(".cart-container")
 let table=document.querySelector("#cart-table")
